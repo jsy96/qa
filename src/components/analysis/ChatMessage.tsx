@@ -1,5 +1,7 @@
 "use client";
 
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import type { AnalysisMessage } from "@/lib/skills/types";
 
 const SKILL_NAMES: Record<string, string> = {
@@ -125,8 +127,10 @@ function SynthesisMessage({ message }: Props) {
         </div>
         <span className="text-sm font-semibold text-navy">分析报告</span>
       </div>
-      <div className="text-sm leading-relaxed whitespace-pre-wrap">
-        {message.content}
+      <div className="markdown-body text-sm leading-relaxed">
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+          {message.content}
+        </ReactMarkdown>
       </div>
     </div>
   );
