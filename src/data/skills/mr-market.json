@@ -1,0 +1,67 @@
+{
+  "slug": "mr-market",
+  "frontmatter": {
+    "name": "mr-market",
+    "description": "用户在市场波动中情绪受到影响，或试图从市场价格变动中获取信息而非从企业分析中获取信息时。\n语言信号：\"市场在跌，是不是该卖\"/\"大家都在买\"/\"这只股票涨了很多，一定有道理\"\n不适用于：纯粹的企业基本面分析（不含市场价格判断的场景）。\n",
+    "source_book": "《巴菲特致股东的信》 沃伦·巴菲特",
+    "source_chapter": "1987年信",
+    "tags": [
+      "behavioral",
+      "market-psychology",
+      "mr-market",
+      "graham"
+    ],
+    "related_skills": [
+      "business-picker",
+      "aesop-three-questions",
+      "margin-of-safety",
+      "fear-and-greed"
+    ]
+  },
+  "sections": {
+    "R": "> \"He said that you should imagine market quotations as coming from a remarkably accommodating fellow named Mr. Market who is your partner in a private business... Mr. Market is there to serve you, not to guide you. It is his pocketbook, not his wisdom, that is useful to you.\"\n>\n> — Warren Buffett, 1987年信 (引用 Benjamin Graham)\n\n> \"In the short run, the market is a voting machine; in the long run, however, it becomes a weighing machine.\"\n>\n> — Benjamin Graham, 引用于1987年信和2017年信\n\n---",
+    "I": "市场先生是一个行为框架，核心逻辑：\n\n1. 把市场价格想象为一个叫\"市场先生\"的情绪化合伙人每天的报价\n2. 他每天都会报一个买入价和卖出价——你可以接受也可以忽略\n3. 他有时极度乐观（报高价），有时极度悲观（报低价）——情绪波动是你的机会\n4. **他为你的决策提供服务，但不提供指导**——他的报价不是\"信号\"，而是\"工具\"\n5. 短期看，市场是投票机（谁的故事更动听）；长期看，市场是称重机（企业的真实价值终将反映在价格上）\n6. 你不需要预测市场先生的情绪——你只需要在他报出荒谬价格时利用它\n\n---",
+    "A1": "### 案例1: Washington Post 1973-74年\n- **问题**: 市场暴跌，Washington Post股价从内在价值的1/4跌到不到1/5\n- **方法论的使用**: 市场先生的极度悲观恰好提供了买入机会——他报了一个荒谬的低价\n- **结论**: 大量买入\n- **结果**: 持有数十年，回报数十倍\n\n### 案例2: 互联网泡沫 1999-2000年\n- **问题**: 所有科技股暴涨，价值投资者严重落后\n- **方法论的使用**: 市场先生极度乐观——他在报高价，但企业的\"重量\"并没有增加\n- **结论**: 坚持不参与\n- **结果**: 成功避开泡沫破裂\n\n---",
+    "A2": {
+      "raw": "### 用户会在什么情境下需要这个 skill?\n\n1. 持有的资产价格大幅下跌，开始恐慌\n2. 市场持续上涨，产生\"不买就错过\"的焦虑\n3. 试图从价格走势中推断企业价值\n4. 因为\"大家都在买/卖\"而想要跟风\n5. 纠结是否应该\"止损\"\n\n### 语言信号\n\n- \"市场在跌，是不是该卖？\"\n- \"大家都在买这个\"\n- \"这只股票涨了很多，一定有道理\"\n- \"我亏了X%，要不要割肉\"\n- \"现在是不是底部/顶部？\"\n\n### 与相邻 skill 的区分\n\n- 与 `fear-and-greed` 的区别：恐惧贪婪是具体行动原则（买/卖），市场先生是更底层的认知框架（你怎么看待市场价格）\n- 与 `business-picker` 的区别：做生意关注企业分析，市场先生关注如何对待市场报价\n\n---",
+      "languageSignals": [
+        "市场在跌，是不是该卖？",
+        "大家都在买这个",
+        "这只股票涨了很多，一定有道理",
+        "我亏了X%，要不要割肉",
+        "现在是不是底部/顶部？"
+      ]
+    },
+    "E": [
+      {
+        "stepNumber": 1,
+        "instruction": "识别市场先生的当前情绪\n- 完成标准：用1-2句话描述市场当前情绪（极度乐观/温和乐观/中性/温和悲观/极度悲观），并给出依据",
+        "completionCriteria": "用1-2句话描述市场当前情绪（极度乐观/温和乐观/中性/温和悲观/极度悲观），并给出依据"
+      },
+      {
+        "stepNumber": 2,
+        "instruction": "分离\"报价\"与\"价值\"\n- 完成标准：写出现价 vs 你的内在价值估计，标注差距大小\n   - 判停条件：如果无法估计内在价值 → 先用 `aesop-three-questions` 估值",
+        "completionCriteria": "写出现价 vs 你的内在价值估计，标注差距大小"
+      },
+      {
+        "stepNumber": 3,
+        "instruction": "决定行动\n- 如果市场先生报高价（>内在价值）→ 不买/考虑卖\n   - 如果市场先生报低价（<内在价值）→ 考虑买/持有\n   - 如果市场先生报合理价 → 不行动\n   - 完成标准：行动基于价值-价格对比，而非基于市场情绪或价格走势\n\n---",
+        "completionCriteria": "行动基于价值-价格对比，而非基于市场情绪或价格走势"
+      }
+    ],
+    "B": "### 不要在以下情况使用此 skill\n\n- 当你需要流动性（必须卖出）时——市场先生的报价就是你必须接受的价格\n- 在非公开市场的资产中（没有市场先生的报价）\n- 当你没有能力独立评估内在价值时——此时你无法判断市场先生的报价是否\"荒谬\"\n\n### 作者的盲点 / 时代局限\n\n- 巴菲特作为最大股东不需要面对赎回压力——普通投资者有流动性约束\n- \"忽略市场先生\"需要极强的心理素质和长期资金——散户很难做到\n- 在极端情况下（如杠杆被迫平仓），即使知道市场先生是错的也无法不行动\n\n### 容易混淆的邻近方法论\n\n- 不是\"逆向投资\"的简单版——逆向投资是行动，市场先生是认知框架\n- 不是\"技术分析\"——市场先生不关注价格走势形态，只关注价格与价值的关系"
+  },
+  "relationships": {
+    "dependsOn": [
+      "business-picker",
+      "aesop-three-questions"
+    ],
+    "composesWith": [
+      "fear-and-greed",
+      "margin-of-safety"
+    ],
+    "contrastsWith": [
+      "(无)"
+    ]
+  }
+}

@@ -1,0 +1,442 @@
+[
+  {
+    "slug": "aesop-three-questions",
+    "name": "aesop-three-questions",
+    "description": "用户需要评估一个资产/投资/项目的价值，或纠结某个东西\"值不值\"时。适用于任何能产生（或不产生）现金流的资产评估。\n语言信号：\"这个值多少钱\"/\"这只股票贵不贵\"/\"这个项目值不值得投\"/\"应该用PE还是PB估值\"\n不适用于：不需要估值分析的纯情感/审美决策。\n",
+    "tags": [
+      "valuation",
+      "intrinsic-value",
+      "dcf",
+      "aesop"
+    ],
+    "source_chapter": "2000年信",
+    "relationships": {
+      "dependsOn": [
+        "circle-of-competence"
+      ],
+      "composesWith": [
+        "margin-of-safety",
+        "economic-moat"
+      ],
+      "contrastsWith": []
+    }
+  },
+  {
+    "slug": "business-picker",
+    "name": "business-picker",
+    "description": "用户在分析股票或投资机会时，需要用\"买企业\"而非\"买股票\"的视角来评估。\n语言信号：\"这只股票技术面怎么样\"/\"股价会涨吗\"/\"应该买什么股票\"\n不适用于：纯粹的企业经营管理问题（不涉及估值时）。\n",
+    "tags": [
+      "investment-philosophy",
+      "business-analysis",
+      "fundamental"
+    ],
+    "source_chapter": "1987年信 / 2021年信",
+    "relationships": {
+      "dependsOn": [
+        "circle-of-competence",
+        "economic-moat"
+      ],
+      "composesWith": [
+        "aesop-three-questions",
+        "look-through-earnings"
+      ],
+      "contrastsWith": []
+    }
+  },
+  {
+    "slug": "ceo-as-risk-officer",
+    "name": "ceo-as-risk-officer",
+    "description": "用户在分析企业风险管理、CEO职责边界，或评估组织是否真正重视风险控制时。\n语言信号:\"风险管理应该谁来管\"/\"为什么要CEO亲自管风险\"/\"风控部门不够吗\"/\"CEO最大的责任是什么\"\n不适用于:不涉及组织风险管理的纯投资分析。\n",
+    "tags": [
+      "risk-management",
+      "ceo",
+      "governance",
+      "preparedness"
+    ],
+    "source_chapter": "2009年信 / 2022年信 / 2001年信",
+    "relationships": {
+      "dependsOn": [],
+      "composesWith": [
+        "no-leverage",
+        "institutional-imperative"
+      ],
+      "contrastsWith": []
+    }
+  },
+  {
+    "slug": "cigar-butt-vs-great-business",
+    "name": "cigar-butt-vs-great-business",
+    "description": "用户在选择投资标的或商业模式时，纠结于\"便宜买差企业\"还是\"合理价买好企业\"。\n语言信号:\"这个便宜能不能捡\"/\"估值低是不是就值得买\"/\"贵的好公司值不值得买\"/\"便宜货有什么问题\"\n不适用于:已有明确投资方法论且不需要在两种风格间做选择的场景。\n",
+    "tags": [
+      "quality-vs-price",
+      "cigar-butt",
+      "business-quality",
+      "evolution"
+    ],
+    "source_chapter": "1967年信 / 1983年信 / 1985年信 / 1987年信",
+    "relationships": {
+      "dependsOn": [
+        "economic-moat",
+        "compounding-thinking"
+      ],
+      "composesWith": [],
+      "contrastsWith": [
+        "margin-of-safety"
+      ]
+    }
+  },
+  {
+    "slug": "circle-of-competence",
+    "name": "circle-of-competence",
+    "description": "用户在做决策时不确定自己是否真的理解某个领域，或准备进入一个看似熟悉但缺乏验证记录的领域时。\n语言信号：\"我觉得我懂这个行业\"/\"这个看起来很简单\"/\"别人都在投这个\"/\"我来研究一下这个新领域\"\n不适用于：纯信息查询、日常琐事选择、用户已有充分专业知识的领域。\n",
+    "tags": [
+      "decision",
+      "circle-of-competence",
+      "boundary",
+      "self-awareness"
+    ],
+    "source_chapter": "1999年信 / 2014年信",
+    "relationships": {
+      "dependsOn": [
+        "(无，这是最基础的)"
+      ],
+      "composesWith": [
+        "margin-of-safety",
+        "aesop-three-questions"
+      ],
+      "contrastsWith": [
+        "(无)"
+      ]
+    }
+  },
+  {
+    "slug": "compounding-thinking",
+    "name": "compounding-thinking",
+    "description": "用户在做长期投资/储蓄/增长决策，需要理解时间和复利的力量，或被短期波动困扰时。\n语言信号:\"持有多久合适\"/\"年化X%十年后会怎样\"/\"为什么长期持有比频繁交易好\"/\"小收益怎么变成大财富\"\n不适用于:短期交易决策、不需要时间维度的分析。\n",
+    "tags": [
+      "compounding",
+      "long-term",
+      "patience",
+      "time"
+    ],
+    "source_chapter": "1962年信 / 2022年信",
+    "relationships": {
+      "dependsOn": [
+        "hold-forever"
+      ],
+      "composesWith": [
+        "economic-moat",
+        "float-thinking"
+      ],
+      "contrastsWith": []
+    }
+  },
+  {
+    "slug": "economic-moat",
+    "name": "economic-moat",
+    "description": "用户需要评估一个企业的长期竞争力和定价权——它能否在极少额外资本下持续增长利润。\n语言信号：\"这个公司有护城河吗\"/\"竞争优势在哪里\"/\"为什么这个公司能长期赚钱\"/\"品牌值多少钱\"\n不适用于：纯粹的行业分析（不涉及单个企业竞争力评估时）。\n",
+    "tags": [
+      "competitive-advantage",
+      "moat",
+      "economic-goodwill",
+      "franchise"
+    ],
+    "source_chapter": "1983年信 / 1986年信",
+    "relationships": {
+      "dependsOn": [
+        "circle-of-competence"
+      ],
+      "composesWith": [
+        "aesop-three-questions",
+        "business-picker"
+      ],
+      "contrastsWith": []
+    }
+  },
+  {
+    "slug": "fear-and-greed",
+    "name": "fear-and-greed",
+    "description": "用户面对市场极端情绪时需要做出逆向来决策。当所有人都在买入/卖出、市场处于极端乐观/悲观时。\n语言信号：\"所有人都在赚钱\"/\"这次不一样\"/\"市场要崩了要不要全卖\"/\"再不买就来不及了\"\n不适用于：正常市场环境下的投资决策、纯基本面分析。\n",
+    "tags": [
+      "behavioral",
+      "contrarian",
+      "greed",
+      "fear",
+      "market-extremes"
+    ],
+    "source_chapter": "1986年信",
+    "relationships": {
+      "dependsOn": [
+        "mr-market",
+        "aesop-three-questions"
+      ],
+      "composesWith": [
+        "margin-of-safety"
+      ],
+      "contrastsWith": [
+        "institutional-imperative"
+      ]
+    }
+  },
+  {
+    "slug": "first-law-of-capital-allocation",
+    "name": "first-law-of-capital-allocation",
+    "description": "用户在做资本配置决策：回购、分红、收购、再投资。关键判断\"这个行动在当前价格下是聪明还是愚蠢\"。\n语言信号：\"公司要回购股票\"/\"应该分红还是再投资\"/\"这个收购价格合理吗\"/\"留存收益能不能创造价值\"\n不适用于：不涉及价格的纯经营决策。\n",
+    "tags": [
+      "capital-allocation",
+      "price",
+      "buyback",
+      "dividend"
+    ],
+    "source_chapter": "2011年信 / 1983年信",
+    "relationships": {
+      "dependsOn": [
+        "aesop-three-questions"
+      ],
+      "composesWith": [
+        "hold-forever",
+        "economic-moat"
+      ],
+      "contrastsWith": []
+    }
+  },
+  {
+    "slug": "float-thinking",
+    "name": "float-thinking",
+    "description": "用户在寻找低成本杠杆替代方案，或分析\"先收钱后提供服务\"的商业模式的财务优势时。\n语言信号:\"有没有低成本的资金来源\"/\"预付款模式有什么好处\"/\"保险公司的商业模式\"/\"如何用别人的钱投资\"\n不适用于:不需要融资/杠杆分析的纯经营决策。\n",
+    "tags": [
+      "float",
+      "insurance",
+      "leverage",
+      "low-cost-capital"
+    ],
+    "source_chapter": "1986年信 / 2000年信 / 2017年信",
+    "relationships": {
+      "dependsOn": [
+        "business-picker"
+      ],
+      "composesWith": [
+        "no-leverage",
+        "compounding-thinking"
+      ],
+      "contrastsWith": []
+    }
+  },
+  {
+    "slug": "hold-forever",
+    "name": "hold-forever",
+    "description": "用户在考虑是否卖出持仓、评估持有期限，或纠结于\"何时卖出\"时。\n语言信号:\"什么时候该卖\"/\"持有多久合适\"/\"已经涨了要不要卖\"/\"什么时候止盈\"\n不适用于:短期交易决策或投机性持仓的卖出判断。\n",
+    "tags": [
+      "long-term",
+      "holding",
+      "patience",
+      "sell-discipline"
+    ],
+    "source_chapter": "1988年信 / 1987年信 / 2002年信",
+    "relationships": {
+      "dependsOn": [
+        "compounding-thinking",
+        "business-picker"
+      ],
+      "composesWith": [
+        "partner-with-admired"
+      ],
+      "contrastsWith": []
+    }
+  },
+  {
+    "slug": "institutional-imperative",
+    "name": "institutional-imperative",
+    "description": "用户在分析管理层决策、公司治理问题，或发现自己/组织在做\"因为别人都这样做\"的决策时。\n语言信号:\"为什么CEO做这么蠢的决定\"/\"同行都在这样做\"/\"董事会怎么不管\"/\"大公司为什么收购失败\"\n不适用于:不涉及组织决策的纯个人选择。\n",
+    "tags": [
+      "corporate-governance",
+      "institutional-imperative",
+      "management",
+      "groupthink"
+    ],
+    "source_chapter": "1981年信 / 1989年信",
+    "relationships": {
+      "dependsOn": [],
+      "composesWith": [
+        "ceo-as-risk-officer"
+      ],
+      "contrastsWith": [
+        "real-conservatism",
+        "partner-with-admired"
+      ]
+    }
+  },
+  {
+    "slug": "look-through-earnings",
+    "name": "look-through-earnings",
+    "description": "用户需要看穿会计数字，理解一个企业或投资组合的真实经济收益。特别适用于评估盈利质量、资本支出真实性、EBITDA误导。\n语言信号:\"这家公司利润很高\"/\"EBITDA是多少\"/\"折旧算不算成本\"/\"自由现金流和利润为什么不一样\"\n不适用于:不需要财务分析的纯定性决策。\n",
+    "tags": [
+      "accounting",
+      "earnings",
+      "EBITDA",
+      "owner-earnings",
+      "financial-analysis"
+    ],
+    "source_chapter": "1978年信 / 1985年信 / 2000年信",
+    "relationships": {
+      "dependsOn": [
+        "business-picker"
+      ],
+      "composesWith": [
+        "aesop-three-questions"
+      ],
+      "contrastsWith": []
+    }
+  },
+  {
+    "slug": "margin-of-safety",
+    "name": "margin-of-safety",
+    "description": "用户准备做出一个重大决策（投资/收购/承诺），需要评估下行保护是否充足时。或在估值不确定时决定是否行动。\n语言信号：\"这个价格够不够低\"/\"万一判断错了怎么办\"/\"我能承受多少亏损\"/\"下行空间有多大\"\n不适用于：日常低风险决策、纯上行分析（不关心下行保护时）。\n",
+    "tags": [
+      "decision",
+      "margin-of-safety",
+      "downside-protection",
+      "risk"
+    ],
+    "source_chapter": "1961年信 / 1962年信",
+    "relationships": {
+      "dependsOn": [
+        "circle-of-competence",
+        "aesop-three-questions"
+      ],
+      "composesWith": [
+        "fear-and-greed",
+        "mr-market"
+      ],
+      "contrastsWith": []
+    }
+  },
+  {
+    "slug": "mr-market",
+    "name": "mr-market",
+    "description": "用户在市场波动中情绪受到影响，或试图从市场价格变动中获取信息而非从企业分析中获取信息时。\n语言信号：\"市场在跌，是不是该卖\"/\"大家都在买\"/\"这只股票涨了很多，一定有道理\"\n不适用于：纯粹的企业基本面分析（不含市场价格判断的场景）。\n",
+    "tags": [
+      "behavioral",
+      "market-psychology",
+      "mr-market",
+      "graham"
+    ],
+    "source_chapter": "1987年信",
+    "relationships": {
+      "dependsOn": [
+        "business-picker",
+        "aesop-three-questions"
+      ],
+      "composesWith": [
+        "fear-and-greed",
+        "margin-of-safety"
+      ],
+      "contrastsWith": [
+        "(无)"
+      ]
+    }
+  },
+  {
+    "slug": "never-issue-shares",
+    "name": "never-issue-shares",
+    "description": "用户在评估收购方式、股权稀释问题，或考虑用自家股票作为支付手段时。\n语言信号:\"用股票收购好不好\"/\"股权稀释怎么办\"/\"现金收购vs股票收购\"/\"为什么要用现金不用股票\"\n不适用于:不涉及股权支付/稀释的纯现金交易决策。\n",
+    "tags": [
+      "acquisition",
+      "dilution",
+      "shares",
+      "capital-allocation"
+    ],
+    "source_chapter": "2000年信 / 2016年信 / 1983年信",
+    "relationships": {
+      "dependsOn": [],
+      "composesWith": [
+        "first-law-of-capital-allocation",
+        "compounding-thinking"
+      ],
+      "contrastsWith": []
+    }
+  },
+  {
+    "slug": "no-leverage",
+    "name": "no-leverage",
+    "description": "用户考虑使用杠杆（保证金/贷款/融资）来放大投资回报，或评估财务安全性时。\n语言信号:\"要不要加杠杆\"/\"用保证金买\"\"贷款投资划算吗\"/\"融资利率很低应该借钱投吗\"\n不适用于:不涉及杠杆/融资的纯经营决策。\n",
+    "tags": [
+      "leverage",
+      "risk",
+      "margin",
+      "financial-safety"
+    ],
+    "source_chapter": "2017年信 / 2022年信",
+    "relationships": {
+      "dependsOn": [],
+      "composesWith": [
+        "margin-of-safety",
+        "float-thinking"
+      ],
+      "contrastsWith": []
+    }
+  },
+  {
+    "slug": "partner-with-admired",
+    "name": "partner-with-admired",
+    "description": "用户在选择合作伙伴、投资管理层、或评估是否应该与某人/某组织建立长期关系时。\n语言信号:\"这个管理层怎么样\"/\"要不要和这个人合作\"/\"两个机会选哪个\"/\"信任怎么验证\"\n不适用于:不需要长期关系评估的纯交易性决策。\n",
+    "tags": [
+      "trust",
+      "partnership",
+      "management",
+      "alignment"
+    ],
+    "source_chapter": "1987年信 / 1983年信",
+    "relationships": {
+      "dependsOn": [],
+      "composesWith": [
+        "business-picker",
+        "hold-forever"
+      ],
+      "contrastsWith": []
+    }
+  },
+  {
+    "slug": "real-conservatism",
+    "name": "real-conservatism",
+    "description": "用户在做决策时受到群体压力或主流意见影响，需要区分\"从众=安全\"和\"独立分析=真正保守\"。\n语言信号:\"大家都说\"\"分析师都推荐\"/\"这是行业惯例\"/\"为什么不随大流\"/\"保守一点是不是更安全\"\n不适用于:已经有独立分析支撑的决策（不需要纠偏时）。\n",
+    "tags": [
+      "independence",
+      "conservatism",
+      "contrarian",
+      "critical-thinking"
+    ],
+    "source_chapter": "1961年信 / 1965年信",
+    "relationships": {
+      "dependsOn": [],
+      "composesWith": [
+        "circle-of-competence"
+      ],
+      "contrastsWith": [
+        "institutional-imperative"
+      ]
+    }
+  },
+  {
+    "slug": "three-asset-categories",
+    "name": "three-asset-categories",
+    "description": "用户在评估不同资产类别（货币/黄金/房产/股票/加密等）的长期价值，或需要理解某类资产的根本经济属性时。\n语言信号:\"黄金值不值得投\"/\"比特币有没有价值\"/\"房产vs股票哪个好\"/\"为什么持有现金会亏\"\n不适用于:不需要跨资产类别比较的纯个股分析。\n",
+    "tags": [
+      "asset-class",
+      "valuation",
+      "currency",
+      "productive-assets"
+    ],
+    "source_chapter": "2011年信 / 1986年信 / 1961年信",
+    "relationships": {
+      "dependsOn": [
+        "aesop-three-questions"
+      ],
+      "composesWith": [
+        "compounding-thinking",
+        "inflation-thinking"
+      ],
+      "contrastsWith": []
+    }
+  }
+]
