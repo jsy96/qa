@@ -59,6 +59,7 @@ export default function AnalysisChat({
   const [messages, setMessages] = useState<AnalysisMessage[]>([]);
   const [isStreaming, setIsStreaming] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const abortRef = useRef<AbortController | null>(null);
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -82,15 +83,26 @@ export default function AnalysisChat({
       onClassificationChange(null);
       onExecutionPlanChange(null);
 
+      const controller = new AbortController();
+      abortRef.current = controller;
+      // 5 minute timeout for long analyses
+      const timeout = setTimeout(() => controller.abort(), 300000);
+
       try {
         const response = await fetch("/api/analyze", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ query }),
+          signal: controller.signal,
         });
 
-        if (!response.ok || !response.body) {
-          throw new Error("Analysis request failed");
+        if (!response.ok) {
+          const errorText = await response.text();
+          throw new Error(`服务器返回 ${response.status}: ${errorText}`);
+        }
+
+        if (!response.body) {
+          throw new Error("浏览器不支持流式响应");
         }
 
         const reader = response.body.getReader();
@@ -193,23 +205,50 @@ export default function AnalysisChat({
             if (event === "done") {
               onActiveSkillChange(null);
               setIsStreaming(false);
+            } else if (event === "synthesis") {
+              setMessages((prev) => [
+                ...prev,
+                {
+                  id: `${prefix}-synthesis-tail`,
+                  role: "assistant",
+                  content: d.content as string,
+                  type: "synthesis",
+                  timestamp: Date.now(),
+                },
+              ]);
             }
           }
         }
 
         setIsStreaming(false);
       } catch (err) {
-        setMessages((prev) => [
-          ...prev,
-          {
-            id: `error-${Date.now()}`,
-            role: "assistant",
-            content: `连接失败：${err instanceof Error ? err.message : "未知错误"}`,
-            type: "synthesis",
-            timestamp: Date.now(),
-          },
-        ]);
+        if (controller.signal.aborted) {
+          setMessages((prev) => [
+            ...prev,
+            {
+              id: `timeout-${Date.now()}`,
+              role: "assistant",
+              content: "分析超时，请重试。",
+              type: "synthesis",
+              timestamp: Date.now(),
+            },
+          ]);
+        } else {
+          setMessages((prev) => [
+            ...prev,
+            {
+              id: `error-${Date.now()}`,
+              role: "assistant",
+              content: `请求失败：${err instanceof Error ? err.message : "未知错误"}`,
+              type: "synthesis",
+              timestamp: Date.now(),
+            },
+          ]);
+        }
         setIsStreaming(false);
+      } finally {
+        clearTimeout(timeout);
+        abortRef.current = null;
       }
     },
     [isStreaming, onClassificationChange, onExecutionPlanChange, onSkillComplete, onActiveSkillChange]

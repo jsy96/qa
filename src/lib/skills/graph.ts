@@ -32,7 +32,7 @@ function resolveDependencies(skillSlug: string, graph: RelationshipMap, visited:
   visited.add(skillSlug);
 
   const node = graph.get(skillSlug);
-  if (!node) return [skillSlug];
+  if (!node) return []; // Skip unknown slugs
 
   const deps: string[] = [];
   for (const dep of node.dependsOn) {
